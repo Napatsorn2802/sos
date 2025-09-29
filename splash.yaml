@@ -1,0 +1,16 @@
+flutter_native_splash:  #เป็นหัวข้อหลักสำหรับกำหนดค่าทั้งหมดที่เกี่ยวกับ splash screen
+  color: "#ffffff"  #กำหนดสีพื้นหลังของ splash screen ในโหมดปกติ (light mode) เป็นสีขาว
+  color_dark: "#272727"   #กำหนดสีพื้นหลังของ splash screen ในโหมดมืด (dark mode) เป็นสีเทาเข้ม
+  image: assets/logos/whit.png #กำหนดรูปภาพโลโก้ที่จะแสดงตรงกลางหน้าสแปลชในโหมดปกติ (light mode)
+  image_dark: assets/logos/dack.png #กำหนดรูปภาพโลโก้ที่จะแสดงตรงกลางหน้าสแปลชในโหมดมืด (dark mode)
+  
+  android_12: #เป็นหัวข้อย่อยสำหรับกำหนดค่าพิเศษสำหรับอุปกรณ์ที่ใช้ Android 12 ขึ้นไป
+    color: "#ffffff" #กำหนดสีพื้นหลังของ splash screen สำหรับ Android 12 ในโหมดปกติ (light mode)
+    color_dark: "#272727" #กำหนดสีพื้นหลังของ splash screen สำหรับ Android 12 ในโหมดมืด (dark mode)
+    image: assets/logos/whit.png #กำหนดรูปภาพโลโก้ที่จะแสดงตรงกลางหน้าสแปลชสำหรับ Android 12 ในโหมดปกติ (light mode)
+    image_dark: assets/logos/dack.png #กำหนดรูปภาพโลโก้ที่จะแสดงตรงกลางหน้าสแปลชสำหรับ Android 12 ในโหมดมืด (dark mode)
+  
+  web: false #ปิดการใช้งาน splash screen สำหรับแพลตฟอร์มเว็บ (Web) จะไม่สร้าง splash screen สำหรับการรันบนเว็บ
+
+#flutter pub run flutter_native_splash:create --path=splash.yaml
+# flutter pub run flutter_native_splash:remove --path=splash.yaml

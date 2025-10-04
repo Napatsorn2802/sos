@@ -3,6 +3,7 @@ import 'package:get/route_manager.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sos/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:sos/features/authentication/screens/signup/signup.dart';
+import 'package:sos/navigation_menu.dart';
 import 'package:sos/utils/constants/sizes.dart';
 import 'package:sos/utils/constants/text_strings.dart';
 
@@ -54,12 +55,15 @@ class TLoginForm extends StatelessWidget {
           const SizedBox(height: TSizes.spaceBtwSections),
     
           // Sign In Button
-          SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () {}, child: const Text(TTexts.signIn))),
+          SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () => Get.to(() => NavigationMenu()), child: const Text(TTexts.signIn))),
           const SizedBox(height: TSizes.spaceBtwItems),
           // Create Account Button
           SizedBox(
             width: double.infinity, 
-            child: OutlinedButton(onPressed: () => Get.to(() => SignupScreen()), child: const Text(TTexts.createAccount))),
+            child: OutlinedButton(
+            onPressed: () => Get.to(() => SignupScreen()), 
+            child: const Text(TTexts.createAccount))),
+        
         ],
       ),
     ),

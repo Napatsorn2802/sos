@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sos/common/widgets/login_signup/susccess_screen/susccess_screen.dart';
+import 'package:sos/common/widgets/susccess_screen/susccess_screen.dart';
 import 'package:sos/features/authentication/screens/login/login.dart';
 import 'package:sos/utils/constants/image_strings.dart';
 import 'package:sos/utils/constants/sizes.dart';

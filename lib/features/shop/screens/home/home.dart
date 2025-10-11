@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children:  [
                         //หัว
-                        TSectionHeading(title: 'Popular Categories',showActionButton: false,textColor: Colors.white, Title: '',),
+                        TSectionHeading(title: 'Popular Categories',showActionButton: false,textColor: Colors.white, ),
                         SizedBox(height: TSizes.spaceBtwItems),
                           /// Categories
                         THomeCategortes(),
@@ -60,7 +60,7 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBtwSections),
 
                   /// Popular Products Section
-                  const TSectionHeading( title: 'Popular Products',showActionButton: true, Title: '',),
+                  const TSectionHeading( title: 'Popular Products',showActionButton: true, ),
                   const SizedBox(height: TSizes.spaceBtwItems),
 
                     //Popular Product 37

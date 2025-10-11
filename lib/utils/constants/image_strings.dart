@@ -56,6 +56,8 @@ class TImages {
   static const String productImage19 = "assets/images/products/หอม.jpg";
   static const String productImage20 = "assets/images/products/อม.jpg";
 
+  static const String  litterIcon = "assets/images/categories/icons8-garden-50.png";
+
  
  
 

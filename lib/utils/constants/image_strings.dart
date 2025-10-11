@@ -58,6 +58,9 @@ class TImages {
 
   static const String  litterIcon = "assets/images/categories/icons8-garden-50.png";
 
+  //user ของหน้าลูกแค้
+  static const String user = "assets/images/user/1.png";
+
  
  
 

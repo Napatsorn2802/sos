@@ -41,7 +41,7 @@ class TVerticalImageText extends StatelessWidget {
               ),
               child: Center(
                 child: Image.asset(
-                  image, // ✅ ใช้ค่าที่ส่งมา
+                  image, 
                   fit: BoxFit.cover,
                   color: dark ? TColors.light : TColors.dark,
                 ),
@@ -51,7 +51,7 @@ class TVerticalImageText extends StatelessWidget {
             SizedBox(
               width: 55,
               child: Text(
-                title, // ✅ ใช้ค่าที่ส่งมา
+                title, 
                 style: Theme.of(context).textTheme.labelMedium!.apply(color: textColor),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,

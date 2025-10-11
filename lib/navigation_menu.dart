@@ -2,10 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:sos/features/personalization/screens/settings/settings.dart';
 import 'package:sos/features/shop/screens/home/home.dart';
 import 'package:sos/features/shop/screens/store/store.dart';
 import 'package:sos/utils/constants/colors.dart';
 import 'package:sos/utils/helpers/helper_functions.dart';
+import 'package:sos/features/shop/screens/wishlist/wishlist.dart';
 
 
 class NavigationMenu extends StatelessWidget {
@@ -24,6 +26,7 @@ class NavigationMenu extends StatelessWidget {
          selectedIndex: controller.selectedIndex.value,
           onDestinationSelected: (index) => controller.selectedIndex.value = index,
           backgroundColor: darkMode ? TColors.black : Colors.white,
+          // ignore: deprecated_member_use
           indicatorColor: darkMode ? TColors.white.withOpacity(0.1) : TColors.black.withOpacity(0.1),
           destinations: const [
             NavigationDestination(icon: Icon(Iconsax.home), label:  'Hone'),
@@ -45,8 +48,8 @@ class NavigationMenu extends StatelessWidget {
   final screens = [
     const HomeScreen(), 
     const StoreScreen(),
-    Container(color: Colors.orange),
-    Container(color: Colors.blue),
+    const FavouriteScreen(),
+    const SettingsScreen(),
     ];
 }
   

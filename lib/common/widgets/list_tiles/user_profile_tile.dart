@@ -1,33 +1,30 @@
+
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:sos/common/widgets/images/t_circular_image.dart';
 import 'package:sos/utils/constants/colors.dart';
 import 'package:sos/utils/constants/image_strings.dart';
-
-
+import 'package:sos/common/widgets/images/t_circular_image.dart';
 
 class TUserProfileTile extends StatelessWidget {
-  const TUserProfileTile({
-    super.key,
-  });
+  final VoidCallback? onPressed;
+
+  const TUserProfileTile({super.key, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-    leading: TCircularImage(
-        image:TImages.user,
-        width: 50,
-        height: 50,
-        padding: 0),
-    title: Text('สมศรี '/*ชื่อ*/ ,style:Theme.of(context)
-      .textTheme
-      .headlineSmall!
-      .apply(color: TColors.white)),
-    subtitle: Text('สมศรี@gmail.com'/*อีเมล */,style:Theme.of(context)
-      .textTheme
-      .bodyMedium!
-      .apply(color: TColors.white)),
-    trailing: IconButton(onPressed: (){}, icon: const Icon(Iconsax.edit, color: TColors.white,),),
+      onTap: onPressed, 
+      leading: const TCircularImage(image: TImages.user),
+      title: const Text(
+        'สมศรี',
+        style: TextStyle(fontWeight: FontWeight.bold, color: TColors.white),
+      ),
+      subtitle: const Text(
+        'somsri@gmail.com',
+        style: TextStyle(color: Colors.white70),
+      ),
+     
+      trailing:  Icon(Iconsax.edit, color: TColors.white,),
     );
   }
 }

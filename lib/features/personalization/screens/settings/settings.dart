@@ -1,52 +1,50 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sos/common/widgets/appbar/appbar.dart';
 import 'package:sos/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:sos/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:sos/common/widgets/texts/section_heading.dart';
 import 'package:sos/common/widgets/list_tiles/settings_menu_tile.dart';
+import 'package:sos/features/personalization/screens/profile/profile.dart';
 import 'package:sos/utils/constants/colors.dart';
 import 'package:sos/utils/constants/sizes.dart';
 
 class SettingsScreen extends StatelessWidget {
-const SettingsScreen ({super.key});
+  const SettingsScreen({super.key});
 
-@override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            //หัว 
+            /// --- ส่วนหัว (Header)
             TPrimaryHeaderContainer(
               child: Column(
                 children: [
-                  //ร่างกาย
+                  /// -- App Bar ด้านบน
                   TAppBar(
                     title: Text(
                       'Account',
                       style: Theme.of(context)
                           .textTheme
                           .headlineMedium!
-                          .apply(color: TColors.white), ), ),
+                          .apply(color: TColors.white),
+                    ),
+                  ),
+
+                  /// -- โปรไฟล์ผู้ใช้
+                  TUserProfileTile(
+                    onPressed: () => Get.to(() => const ProfileScreen()),
+                  ),
                   const SizedBox(height: TSizes.spaceBtwSections),
-                  //โปรไฟล์ลูกแค้เอ้ยลูกค้า
-                  TUserProfileTile(),
-                  const SizedBox(height: TSizes.spaceBtwSections),//ไอคอนแก้ไข
-                    
-                ]
+                ],
               ),
             ),
-            //ร่างกาย
-            Padding(
-              padding: const EdgeInsets.all(TSizes.defaultSpace),
-              child: Column(
-                children: [
-                //ตั้งค่าบัญชี
-              const TSectionHeading(title: 'Account Settings',showActionButton: false,),
-              const SizedBox(height: TSizes.spaceBtwItems),
 
-              Padding(
+            /// --- ส่วนเนื้อหา (Body)
+            Padding(
               padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
@@ -57,22 +55,24 @@ const SettingsScreen ({super.key});
                   ),
                   const SizedBox(height: TSizes.spaceBtwItems),
 
-                  /// เมนูของผู้ใช้
+                  /// --- เมนูต่าง ๆ ของผู้ใช้
                   TSettingsMenuTile(
                     icon: Iconsax.safe_home,
                     title: 'My Addresses',
                     subtitle: 'Set shopping delivery address',
-                    onTap: () {}),
+                    
+                  ), 
+
                   TSettingsMenuTile(
                       icon: Iconsax.shopping_cart,
                       title: 'My Cart',
                       subtitle: 'Add, remove products and move to checkout',
-                      onTap: () {}),
+                      ),
                   TSettingsMenuTile(
                       icon: Iconsax.bag_tick,
                       title: 'My Orders',
                       subtitle: 'In-progress and Completed Orders',
-                      onTap: (){}),
+                      ),
                   TSettingsMenuTile(
                       icon: Iconsax.bank,
                       title: 'Bank Account',
@@ -94,17 +94,17 @@ const SettingsScreen ({super.key});
                       subtitle: 'Manage data usage and connected accounts',
                       onTap: () {}),
 
-                  // ตั้งค่า
+                  /// --- หมวด App Settings
                   const SizedBox(height: TSizes.spaceBtwSections),
                   const TSectionHeading(
                       title: 'App Settings', showActionButton: false),
                   const SizedBox(height: TSizes.spaceBtwItems),
-                    TSettingsMenuTile(
+
+                  TSettingsMenuTile(
                       icon: Iconsax.document_upload,
                       title: 'Load Data',
                       subtitle: 'Upload Data to your Cloud Firebase',
-                      onTap: () {}
-                      ),
+                      onTap: () {}),
                   TSettingsMenuTile(
                     icon: Iconsax.location,
                     title: 'Geolocation',
@@ -125,23 +125,60 @@ const SettingsScreen ({super.key});
                   ),
 
                 const SizedBox(height: TSizes.spaceBtwSections),
-
-                 // Logout 
-                   SizedBox(
+                
+                  /// ✅ ปุ่ม Logout สไตล์มินิมอล
+                  SizedBox(
                     width: double.infinity,
-                    child: OutlinedButton(onPressed: () {}, 
-                    child: const Text('Logout')),
+                    child: OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        side: const BorderSide(color: Colors.grey),
+                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                       ),
-                     const SizedBox(height: TSizes.spaceBtwSections * 2.5,)
-                ]
+                      onPressed: () async {
+                        // ยืนยันก่อนออก
+                        final confirm = await showDialog<bool>(
+                          context: context,
+                          builder: (ctx) => AlertDialog(
+                            title: const Text('Logout'),
+                            content: const Text(
+                                'Are you sure you want to log out?'),
+                            actions: [
+                              TextButton(
+                                onPressed: () => Navigator.pop(ctx, false),
+                                child: const Text('Cancel'),
+                              ),
+                              TextButton(
+                                onPressed: () => Navigator.pop(ctx, true),
+                                child: const Text(
+                                  'Yes, Logout',
+                                  style: TextStyle(color: Colors.redAccent),
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+
+                      
+                      },
+                      child: const Text(
+                        'Logout',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                          color: Colors.black87,
+                        ),
                       ),
                     ),
+                  ),
                 ],
               ),
             ),
           ],
         ),
-      ),   
-    );    
+      ),
+    );
   }
 }

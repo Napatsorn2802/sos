@@ -10,7 +10,7 @@ import 'package:sos/common/widgets/layouts/grid_layout.dart';
 import 'package:sos/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:sos/common/widgets/texts/section_heading.dart';
 import 'package:sos/features/shop/screens/brand/all_brand.dart';
-import 'package:sos/features/shop/screens/widgets/category_tab.dart';
+import 'package:sos/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:sos/utils/constants/colors.dart';
 import 'package:sos/utils/constants/sizes.dart';
 import 'package:sos/utils/helpers/helper_functions.dart';
@@ -69,16 +69,18 @@ class StoreScreen extends StatelessWidget {
                 // /// Tabs -- Tutorial
                 bottom: TTabBar(
                   tabs: const [
-                      Tab(child: Text('Perennial Plant')),              // ไม้ยืนต้น
-                      Tab(child: Text('Shrub')),              // ไม้พุ่ม
-                      Tab(child: Text('Ornamental Plant')),                // ไม้ประดับ
-                      Tab(child: Text('Creeper')),                // ไม้เลื้อย
-                      Tab(child: Text('Aquatic Vines')),                  // ไม้น้ำ
-                      Tab(child: Text('Garden Plants')),            // พืชสวนครัว
-                      Tab(child: Text('medicinal plants')),                // พืชสมุนไพร
-                      Tab(child: Text('Flowering Plants')),              // ไม้ดอก
-                      Tab(child: Text('Auspicious Wood')), // ไม้มงคล
-                    ],
+                      Tab(child: Text('flowering tree')),              // ไม้ประดับ
+                      Tab(child: Text('flowering tree')),              // ไม้พุ่ม
+                      Tab(child: Text('perennial plant')),                  // ไม้ยืนต้น
+                      Tab(child: Text('medicinal plants')),              // ไม้สมุนไพร
+                      Tab(child: Text('water plant')),                  // ไม้น้ำ
+                      Tab(child: Text('ivy')),                // ไม้เลื้อย
+                      Tab(child: Text('Auspicious wood')),  //ไม้มงคล
+                      Tab(child: Text('fertilizer')),                // ปุ๋ย
+                      Tab(child: Text('Cultivation equipment')),                // อุปกรณ์เพาะปลูก
+                      
+                  ]
+                     
                 ),
                 
               ),
@@ -97,6 +99,7 @@ class StoreScreen extends StatelessWidget {
               TCategoryTab(),
               TCategoryTab(),
               TCategoryTab(),
+              
             ],
           ), 
           ),

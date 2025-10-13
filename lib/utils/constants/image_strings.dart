@@ -57,9 +57,28 @@ class TImages {
   static const String productImage20 = "assets/images/products/อม.jpg";
 
   static const String  litterIcon = "assets/images/categories/icons8-garden-50.png";
+//รูปลูกค้าหน้ารีวิว
+  static const String userProfileImage1 = "assets/images/reviews/icons8-user-50-2.png";
+  static const String userProfileImage2 = "assets/images/reviews/icons8-user-50-3.png";
+  static const String userProfileImage3 = "assets/images/reviews/icons8-user-50.png";
+
+
 
   //user ของหน้าลูกแค้
   static const String user = "assets/images/user/1.png";
+
+  //ต้นไม้
+  static const String tree1 = "assets/images/icons/icons8-tree-52.png";
+  //ต้นไม้ที่มีดอก
+  static const String flower1     = "assets/images/icons/icons8-flower-64.png";
+  //ต้นไม้ที่มีผล
+  static const String  fruit1 = "assets/images/icons/icons8-fruit-48.png";
+  //ปุ๋ย
+ static const String  fertilizer1 = "assets/images/icons/icons8-potting-soil-64.png";
+
+  //อุปกรเพาพปลูก
+ static const String  equipment1 = "assets/images/icons/icons8-watering-can-50.png";
+
 
  
  

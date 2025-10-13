@@ -50,7 +50,7 @@ class SettingsScreen extends StatelessWidget {
                 children: [
                   /// --- หมวด Account Settings
                   const TSectionHeading(
-                    title: 'Account Settings',
+                    title: 'การตั้งค่าบัญชี',
                     showActionButton: false,
                   ),
                   const SizedBox(height: TSizes.spaceBtwItems),
@@ -58,75 +58,75 @@ class SettingsScreen extends StatelessWidget {
                   /// --- เมนูต่าง ๆ ของผู้ใช้
                   TSettingsMenuTile(
                     icon: Iconsax.safe_home,
-                    title: 'My Addresses',
-                    subtitle: 'Set shopping delivery address',
+                    title: 'ที่อยู่',
+                    subtitle: 'กำหนดที่อยู่จัดส่ง',
                     
                   ), 
 
                   TSettingsMenuTile(
                       icon: Iconsax.shopping_cart,
-                      title: 'My Cart',
-                      subtitle: 'Add, remove products and move to checkout',
+                      title: 'ตะกร้าสินค้า',
+                      subtitle: 'เพิ่ม ลบสินค้า และย้ายไปที่จุดชำระเงิน',
                       ),
                   TSettingsMenuTile(
                       icon: Iconsax.bag_tick,
-                      title: 'My Orders',
-                      subtitle: 'In-progress and Completed Orders',
+                      title: 'คำสั่งซื้อ',
+                      subtitle: 'คำสั่งซื้อที่กำลังดำเนินการและเสร็จสมบูรณ์',
                       ),
                   TSettingsMenuTile(
                       icon: Iconsax.bank,
-                      title: 'Bank Account',
-                      subtitle: 'Withdraw balance to registered bank account',
+                      title: 'บัญชีธนาคาร',
+                      subtitle: 'ธนาคารที่ลงทะเบียนไว้',
                       onTap: () {}),
                   TSettingsMenuTile(
                       icon: Iconsax.discount_shape,
-                      title: 'My Coupons',
-                      subtitle: 'List of all the discounted coupons',
+                      title: 'คูปองของฉัน',
+                      subtitle: 'รายการคูปองส่วนลดทั้งหมด',
                       onTap: () {}),
                   TSettingsMenuTile(
                       icon: Iconsax.notification,
-                      title: 'Notifications',
-                      subtitle: 'Set any kind of notification message',
+                      title: 'การแจ้งเตือน',
+                      subtitle: 'ตั้งค่าข้อความแจ้งเตือนประเภทใดก็ได้',
                       onTap: () {}),
                   TSettingsMenuTile(
                       icon: Iconsax.security_card,
-                      title: 'Account Privacy',
-                      subtitle: 'Manage data usage and connected accounts',
+                      title: 'ความเป็นส่วนตัว',
+                      subtitle: 'จัดการการใช้งานข้อมูลและบัญชีที่เชื่อมโยง',
                       onTap: () {}),
 
                   /// --- หมวด App Settings
                   const SizedBox(height: TSizes.spaceBtwSections),
                   const TSectionHeading(
-                      title: 'App Settings', showActionButton: false),
+                      title: 'ตั้งค่าแอพ', showActionButton: false),
                   const SizedBox(height: TSizes.spaceBtwItems),
 
                   TSettingsMenuTile(
                       icon: Iconsax.document_upload,
-                      title: 'Load Data',
-                      subtitle: 'Upload Data to your Cloud Firebase',
+                      title: 'โหลดข้อมูล',
+                      subtitle: 'อัปโหลดข้อมูลไปยัง Cloud Firebase ของคุณ',
                       onTap: () {}),
                   TSettingsMenuTile(
                     icon: Iconsax.location,
-                    title: 'Geolocation',
-                    subtitle: 'Set recommendation based on location',
+                    title: 'ตำแหน่งทางภูมิศาสตร์',
+                    subtitle: 'ตั้งค่าคำแนะนำตามสถานที่',
                     trailing: Switch(value: true, onChanged: (value) {}),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.security_user,
-                    title: 'Safe Mode',
-                    subtitle: 'Search result is safe for all ages',
+                    title: 'เซฟโหมด',
+                    subtitle: 'ผลการค้นหาปลอดภัยสำหรับทุกวัย',
                     trailing: Switch(value: false, onChanged: (value) {}),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.image,
-                    title: 'HD Image Quality',
-                    subtitle: 'Set image quality to be seen',
+                    title: 'คุณภาพของภาพระดับ HD',
+                    subtitle: 'ตั้งค่าคุณภาพของภาพที่จะเห็น',
                     trailing: Switch(value: false, onChanged: (value) {}),
                   ),
 
                 const SizedBox(height: TSizes.spaceBtwSections),
                 
-                  /// ✅ ปุ่ม Logout สไตล์มินิมอล
+                  /// ออก
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton(
@@ -139,12 +139,12 @@ class SettingsScreen extends StatelessWidget {
                       ),
                       onPressed: () async {
                         // ยืนยันก่อนออก
-                        final confirm = await showDialog<bool>(
+                        await showDialog<bool>(
                           context: context,
                           builder: (ctx) => AlertDialog(
                             title: const Text('Logout'),
                             content: const Text(
-                                'Are you sure you want to log out?'),
+                                'คุณแน่ใจใช่ไหมที่จะออกแอพ?'),
                             actions: [
                               TextButton(
                                 onPressed: () => Navigator.pop(ctx, false),

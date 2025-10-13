@@ -6,6 +6,7 @@ import 'package:sos/common/widgets/custom_shapes/containers/primary_header_conta
 import 'package:sos/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:sos/common/widgets/texts/section_heading.dart';
 import 'package:sos/common/widgets/list_tiles/settings_menu_tile.dart';
+import 'package:sos/features/personalization/screens/address/address.dart';
 import 'package:sos/features/personalization/screens/profile/profile.dart';
 import 'package:sos/utils/constants/colors.dart';
 import 'package:sos/utils/constants/sizes.dart';
@@ -60,9 +61,8 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.safe_home,
                     title: 'ที่อยู่',
                     subtitle: 'กำหนดที่อยู่จัดส่ง',
-                    
+                    onTap: () => Get.to(() => UserAddressScreen()),
                   ), 
-
                   TSettingsMenuTile(
                       icon: Iconsax.shopping_cart,
                       title: 'ตะกร้าสินค้า',

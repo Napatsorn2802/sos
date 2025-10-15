@@ -24,7 +24,7 @@ class TCategoryTab extends StatelessWidget {
             const TBrandShowcase(images: [TImages.productImage3, TImages.productImage2, TImages.productImage1]),
             const SizedBox(height: TSizes.spaceBtwItems),
             /// -- Products
-            TSectionHeading(title: 'You might like', onPressed: (){}),
+            TSectionHeading(title: 'สินค้าที่คุณอาจสนใจ', onPressed: (){}),
             const SizedBox(height: TSizes.spaceBtwItems),
             
             TGridLayout(itemCount: 4, itemBuilder: (_, index) => const TProductCardVertical()),

@@ -11,8 +11,8 @@ import 'package:sos/utils/constants/image_strings.dart';
 import 'package:sos/utils/constants/sizes.dart';
 import 'package:sos/utils/helpers/helper_functions.dart';
 
-class RProductCardHorizontal extends StatelessWidget {
-  const RProductCardHorizontal({super.key});
+class TProductCardHorizontal extends StatelessWidget {
+  const TProductCardHorizontal({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class RProductCardHorizontal extends StatelessWidget {
       width: 310,
       padding: const EdgeInsets.all(1),
       decoration: BoxDecoration(
-      // boxShadow: [RShadowStyle.verticalProductShadow],
+      // boxShadow
         borderRadius: BorderRadius.circular(TSizes.productItemRadius),
         color: dark ? TColors.darkGrey : TColors.softGrey,
       ),
@@ -36,13 +36,13 @@ class RProductCardHorizontal extends StatelessWidget {
             backgroundColor: dark ? TColors.dark : TColors.light,
             child: Stack(
               children: [
-                /// -- Product Image
+                /// -- Product Imageรูปภาพสินค้า
                 const TRoundedImage(
                   imageUrl: TImages.productImage1,
                   applyImageRadius: true,
                 ),
 
-                /// -- Sale Tag
+                /// -- Sale Tagลดราคา
                 Positioned(
                   top: 8,
                   left: 8,
@@ -61,7 +61,7 @@ class RProductCardHorizontal extends StatelessWidget {
                   ),
                 ),
 
-                /// -- Favourite Icon
+                /// -- Favourite Iconไอคอนที่ชื่นชอบ
                 const Positioned(
                   top: 0,
                   right: 0,
@@ -71,7 +71,7 @@ class RProductCardHorizontal extends StatelessWidget {
             ),
           ),
 
-          /// Details
+          /// DetailsDetails
           SizedBox(
             width: 172,
             child: Padding(

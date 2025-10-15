@@ -1,20 +1,20 @@
 // This class contains all the App Text in String formats.
 class TTexts {
-  // -- GLOBAL Texts
+  // -- GLOBAL Textsข้อความทั่วโลก
   static const String submit = "Submit";
   static const String appName = "T-Store";
   static const String tContinue = "Continue";
 
-  // -- OnBoarding Texts
-  static const String onboardingTitle1 = "Choose your product";
-  static const String onboardingTitle2 = "Select Payment Method";
-  static const String onboardingTitle3 = "Deliver at your door step";
+  // -- OnBoarding Texts ข้อความต้อนรับ
+  static const String onboardingTitle1 = "เลือกผลิตภัณฑ์ที่คุณชื่นชอบ";
+  static const String onboardingTitle2 = "เลือกวิธีการชำระเงิน";
+  static const String onboardingTitle3 = "จัดส่งถึงหน้าประตูบ้านของคุณ";
 
-  static const String onboardingSubTitle1 = "Welcome to a World of Limitless Choices - Your Perfect Product Awaits!";
-  static const String onboardingSubTitle2 = "For Seamless Transactions, Choose Your Payment Path - Your Convenience, Our Priority!";
-  static const String onboardingSubTitle3 = "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
+  static const String onboardingSubTitle1 = "ยินดีต้อนรับสู่โลกแห่งพืชพรรณไม้ - ผลิตภัณฑ์อันสมบูรณ์แบบของคุณรออยู่!";
+  static const String onboardingSubTitle2 = "สำหรับการทำธุรกรรมที่ราบรื่น เลือกช่องทางการชำระเงินของคุณ - ความสะดวกของคุณคือสิ่งสำคัญสำหรับเรา!";
+  static const String onboardingSubTitle3 = "จากหน้าประตูบ้านเราถึงหน้าบ้านคุณ - จัดส่งรวดเร็ว ปลอดภัย และไร้รอยขีดข่วน!";
 
-  // -- Authentication Form Text
+  // -- Authentication Form Text ข้อความแบบฟอร์มการรับรองความถูกต้อง
   static const String firstName = "First Name";
   static const String lastName = "Last Name";
   static const String email = "E-Mail";
@@ -22,39 +22,40 @@ class TTexts {
   static const String newPassword = "New Password";
   static const String username = "Username";
   static const String phoneNo = "Phone Number";
-  static const String rememberMe = "Remember Me";
-  static const String forgetPassword = "Forget Password";
-  static const String signIn = "Sign In";
-  static const String createAccount = "Create Account";
-  static const String orSignInWith = "or sign in with";
-  static const String orSignUpWith = "or sign up with";
-  static const String iAgreeTo = "I agree to";
-  static const String privacyPolicy = "Privacy Policy";
-  static const String termsOfUse = "Terms of use";
-  static const String verificationCode = "VerificationCode";
-  static const String resendEmail = "Resend Email";
-  static const String resendEmailIn = "Resend email in";
+  static const String rememberMe = "จำฉันไว้";
+  static const String forgetPassword = "ลืมรหัสผ่าน";
+  static const String signIn = "เข้าสู่ระบบ";
+  static const String createAccount = "สร้างบัญชี";
+  static const String orSignInWith = "หรือเข้าสู่ระบบด้วย";
+  static const String orSignUpWith = "หรือลงทะเบียนกับ";
+  static const String iAgreeTo = "ฉันเห็นด้วยกับ";
+  static const String privacyPolicy = "นโยบายความเป็นส่วนตัว";
+  static const String termsOfUse = "เงื่อนไขการใช้งาน";
+  static const String verificationCode = "รหัสยืนยัน";
+  static const String resendEmail = "ส่งอีเมลอีกครั้ง";
+  static const String resendEmailIn = "ส่งอีเมลอีกครั้งใน";
 
-  // -- Authentication Headings Text
-  static const String loginTitle = "Welcome back,";
-  static const String loginSubTitle = "Discover Limitless Choices and Unmatched Convenience.";
-  static const String signupTitle = "Let's create your account";
-  static const String forgetPasswordTitle = "Forget password";
-  static const String forgetPasswordSubTitle = "Don't worry sometimes people can forget too, enter your email and we will send you a password reset link.";
+  // -- Authentication Headings Text ข้อความหัวข้อการตรวจสอบสิทธิ์
+  static const String loginTitle = "ยินดีตอนรับ";
+  static const String loginSubTitle = "ค้นพบตัวเลือกที่ไร้ขีดจำกัดและความสะดวกสบาย";
+  static const String signupTitle = "สร้างบัญชีของคุณ";
+  static const String forgetPasswordTitle = "ลืมรหัสผ่าน";
+  static const String forgetPasswordSubTitle = "ไม่ต้องกังวล บางครั้งผู้คนก็อาจลืมได้เช่นกัน กรุณากรอกอีเมลของคุณแล้วเราจะส่งลิงก์รีเซ็ตรหัสผ่านให้กับคุณ.";
   static const String changeYourPasswordTitle = "Password Reset Email Sent";
-  static const String changeYourPasswordSubTitle = "Your Account Security is Our Priority! We've Sent You a Secure Link to Safely Change Your Password and Keep Your Account Protected.";
-  static const String confirmEmail = "Verify your email address!";
-  static const String confirmEmailSubTitle = "Congratulations! Your Account Awaits: Verify Your Email to Start Shopping and Experience a World of Unrivaled Deals and Personalized Offers.";
-  static const String emailNotReceivedTitle = "Didn't get the email? Check your junk/spam or resend it.";
-  static const String yourAccountCreatedTitle = "Your Account successfully created!";
-  static const String yourAccountCreatedSubTitle = "Welcome to Your Ultimate Shopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shopping!";
+  static const String changeYourPasswordSubTitle = "ความปลอดภัยบัญชีของคุณคือสิ่งที่เราให้ความสำคัญเป็นอันดับแรก! เราได้ส่งลิงก์ที่ปลอดภัยให้กับคุณเพื่อเปลี่ยนรหัสผ่านของคุณอย่างปลอดภัยและปกป้องบัญชีของคุณ";
+  static const String confirmEmail = "ยืนยันที่อยู่อีเมลของคุณ!";
+  static const String confirmEmailSubTitle = "ยืนยันอีเมลของคุณเพื่อเริ่มช้อปปิ้ง";
+  static const String emailNotReceivedTitle = "ไม่ได้รับอีเมลใช่ไหม? ลองตรวจสอบในอีเมลขยะ/สแปม หรือส่งใหม่อีกครั้ง";
+  static const String yourAccountCreatedTitle = "สร้างบัญชีของคุณสำเร็จแล้ว!";
+  static const String yourAccountCreatedSubTitle = "บัญชีของคุณถูกสร้างขึ้นแล้ว";
   
   // -- Home
 
-  static const String homeAppBarTitle = "Good day for shopping";
-  // static const String homeAppBarTitle = "วันนี้เหมาะสำหรับการช็อปปิ้ง";
-  static const String homeAppBarSubTitle = "Tomoexx moonLight";
+  static const String homeAppBarTitle = "ยินดีตอนรับสู่ร้าน";
+ 
+  static const String homeAppBarSubTitle = "พืชพรรณไม้";
 
+  // ignore: strict_top_level_inference
   static get and => null;
   // static const String homeAppBarSubTitle = "ไทมูร์ ซิกันเดอร์";
 }

@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         // -- Heading
-                        const TSectionHeading(title: 'Popular Categories',showActionButton: false, textColor: Colors.white),
+                        const TSectionHeading(title: 'หมวดหมู่ยอดนิยม',showActionButton: false, textColor: Colors.white),
                         const SizedBox(height: TSizes.spaceBtwItems),
                         
                         // Categories
@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
                 TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3,]),
                 const SizedBox(height: TSizes.spaceBtwSections),
                   // heading
-                TSectionHeading(title: 'Popular Products', onPressed: () => Get.to(() => const AllProducts())),
+                TSectionHeading(title: 'สินค้ายอดนิยม', onPressed: () => Get.to(() => const AllProducts())),
                 const SizedBox(height: TSizes.spaceBtwItems),
                   // --- Popular Products -- Tutorial [Section # 3, Video # 7]
                   TGridLayout(itemCount: 4, itemBuilder: (_ , index) => const TProductCardVertical()), 
@@ -75,7 +75,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
-  
-             

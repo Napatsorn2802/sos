@@ -29,7 +29,7 @@ class TPromoSlider extends StatelessWidget {
             onPageChanged: (index, _) => controller.updatePageIndicator(index)  ),
           items: banners.map((url) => TRoundedImage(imageUrl: url)).toList(),
         ),
-        const SizedBox(height: TSizes.spaceBtwItems), // ✅ ปิดด้วย comma
+        const SizedBox(height: TSizes.spaceBtwItems), 
         Center(
           child: Obx(
             () => Row(

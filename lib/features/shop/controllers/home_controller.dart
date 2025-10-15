@@ -7,6 +7,7 @@ static HomeController get instance => Get.find();
 
 final carousalCurrentIndex = 0.obs;
 
+// ignore: strict_top_level_inference
 void updatePageIndicator(index) {
 carousalCurrentIndex.value = index;
 

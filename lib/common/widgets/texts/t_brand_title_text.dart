@@ -6,7 +6,7 @@ class TBrandTitleText extends StatelessWidget {
   const TBrandTitleText({
     super.key,
     this.color,
-    this.maxLines = 1,
+    this.maxLines = 2,
     required this.title,
     this.textAlign = TextAlign.center,
     this.brandTextSize = TextSizes.small,

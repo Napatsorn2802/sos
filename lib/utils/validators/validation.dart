@@ -17,27 +17,27 @@ class TValidator {
 
   static String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Password is required.';
+      return 'ต้องใช้รหัสผ่าน.';
     }
 
     // Check for minimum password length
     if (value.length < 6) {
-      return 'Password must be at least 6 characters long.';
+      return 'รหัสผ่านต้องมีความยาวอย่างน้อย 6 ตัวอักษร.';
     }
 
     // Check for uppercase letters
     if (!value.contains(RegExp(r'[A-Z]'))) {
-      return 'Password must contain at least one uppercase letter.';
+      return 'รหัสผ่านต้องมีอักษรตัวพิมพ์ใหญ่อย่างน้อยหนึ่งตัว.';
     }
 
     // Check for numbers
     if (!value.contains(RegExp(r'[0-9]'))) {
-      return 'Password must contain at least one number.';
+      return 'รหัสผ่านต้องมีตัวเลขอย่างน้อยหนึ่งตัว.';
     }
 
     // Check for special characters
     if (!value.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>]'))) {
-      return 'Password must contain at least one special character.';
+      return 'รหัสผ่านต้องมีอักขระพิเศษอย่างน้อยหนึ่งตัว.';
     }
 
     return null;
@@ -45,14 +45,14 @@ class TValidator {
 
   static String? validatePhoneNumber(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Phone number is required.';
+      return 'ต้องระบุหมายเลขโทรศัพท์.';
     }
 
     // Regular expression for phone number validation (assuming a 10 digits)
     final phoneRegExp = RegExp(r'^\d{10}$');
 
     if (!phoneRegExp.hasMatch(value)) {
-      return 'Invalid phone number format (10 digits required).';
+      return 'รูปแบบหมายเลขโทรศัพท์ไม่ถูกต้อง (ต้องมี 10 หลัก)).';
     }
 
     return null;

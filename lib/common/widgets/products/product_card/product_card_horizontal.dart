@@ -47,7 +47,7 @@ class TProductCardHorizontal extends StatelessWidget {
                   top: 8,
                   left: 8,
                   child: TRoundedContainer(
-                    radius: TSizes.sm,
+                  radius: TSizes.sm,
                     // ignore: deprecated_member_use
                     backgroundColor: TColors.secondary.withOpacity(0.8),
                     padding: const EdgeInsets.symmetric(horizontal: TSizes.sm, vertical: TSizes.xs),
@@ -81,7 +81,7 @@ class TProductCardHorizontal extends StatelessWidget {
                   const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      TProductTitleText(title: 'Green Nike Half Sleeves Shirt', smallSize: true),
+                      TProductTitleText(title: 'ต้นมะเขือนเทศ', smallSize: true),//เสื้อเชิ้ตแขนสั้น Nike สีเขียว
                       SizedBox(height: TSizes.spaceBtwItems / 2),
                       TBrandTitleWithVerifiedIcon(title: 'ต้นไม้'),
                     ],

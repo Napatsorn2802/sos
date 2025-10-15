@@ -8,6 +8,7 @@ import 'package:sos/common/widgets/texts/section_heading.dart';
 import 'package:sos/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:sos/features/personalization/screens/address/address.dart';
 import 'package:sos/features/personalization/screens/profile/profile.dart';
+import 'package:sos/features/shop/screens/order/order.dart';
 import 'package:sos/utils/constants/colors.dart';
 import 'package:sos/utils/constants/sizes.dart';
 
@@ -72,6 +73,7 @@ class SettingsScreen extends StatelessWidget {
                       icon: Iconsax.bag_tick,
                       title: 'คำสั่งซื้อ',
                       subtitle: 'คำสั่งซื้อที่กำลังดำเนินการและเสร็จสมบูรณ์',
+                      onTap:() => Get.to(() => const OrderScreen()),
                       ),
                   TSettingsMenuTile(
                       icon: Iconsax.bank,
